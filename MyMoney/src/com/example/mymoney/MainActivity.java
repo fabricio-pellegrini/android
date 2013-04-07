@@ -10,13 +10,19 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Menu;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
 	EditText _txtValor;
 	TextView _txtData;
+	ImageButton _btnShop;
+	
+	boolean _state;
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,10 +30,9 @@ public class MainActivity extends Activity {
         
         _txtValor =(EditText)findViewById(R.id.txt_Valor);
         _txtData =(TextView)findViewById(R.id.txt_Data);
-     
-        
+        //_btnShop = (ImageButton)findViewById(R.id.btn_Shop);
         _txtData.setText(new SimpleDateFormat("dd/MM/yyyy").format( new Date()));
-        
+        _state = false;
         _txtValor.addTextChangedListener(new TextWatcher() {
 			
         	private String current = "";
@@ -63,6 +68,9 @@ public class MainActivity extends Activity {
 				
 			}
 		});
+    
+        
+        
     }
 
 
@@ -71,6 +79,11 @@ public class MainActivity extends Activity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
+    }
+    
+    public void changeState(View view) {
+        
+    	
     }
     
 }

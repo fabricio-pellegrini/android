@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    style="android:buttonStyleToggle"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_vertical|center_horizontal"
@@ -64,5 +65,39 @@
             android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:text="@string/despesa" />
+
+       <com.example.mymoney.MyImageButton
+            selected = "true"
+            android:id="@+id/imageButton6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             
+            android:onClick="changeState"/>
+        
+        <com.example.mymoney.MyImageButton
+            selected = "false"
+            android:id="@+id/imageButton5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             
+            android:onClick="changeState"/>
+
+        <ToggleButton
+        android:id="@+id/toggleFBAutoShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btntoggle_selector"
+        android:textColor="@android:color/white"
+        android:textOff=""
+        android:textOn="" 
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"/>
+
+        <ToggleButton
+            android:id="@+id/toggleButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ToggleButton" />
+       
     </LinearLayout>
 
